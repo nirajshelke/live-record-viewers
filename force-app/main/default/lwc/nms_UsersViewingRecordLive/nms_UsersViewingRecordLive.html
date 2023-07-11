@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <template for:each={liveUsersOnRecord} for:item="user">           
+            <span key={user.Id} class="slds-var-p-around_xx-small">
+                <span class="tooltip" data-initials={user.User_Initials__c}>
+                    <span class="tooltiptext">{user.User__r.Name}</span>
+                </span>
+            </span>
+        </template>
+    </lightning-card>
+</template>
